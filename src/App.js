@@ -1,7 +1,12 @@
+
+import CountriesProvide from './context/index'
+
 function App() {
   return (
     <div className="App"> 
-      This is countries viewer app
+      <CountriesProvide>
+        {/* children */}
+      </CountriesProvide>
     </div>
   );
 }
