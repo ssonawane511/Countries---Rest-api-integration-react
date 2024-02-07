@@ -7,9 +7,10 @@ const countriesProvider = (props) => {
     const handleGetCountriesData = async (pageId) => {
         try{
             let response = await getCountries(pageId);
+            return response;
         }catch (error) {
-
-        }
+            console.error(error);
+        }    
     }
 
     return <countriesContext.Provider
