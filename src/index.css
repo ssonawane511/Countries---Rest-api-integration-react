@@ -5,9 +5,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(218, 218, 218);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-jca{
+  justify-content: space-around;
+}
+
+.container {
+  max-width: 1320px;
+  margin: auto;
+}
+
+.country-card{
+  background-color: white;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0px;
+}
+
+.country-card img{ 
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.country-card .details{
+  padding: 10px;
+}
+
+.country-card .details p{
+  margin: 0px;
+  margin-bottom: 5px;
 }

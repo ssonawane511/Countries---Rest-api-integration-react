@@ -4,7 +4,7 @@ import Home from './pages';
 
 function App() {
   return (
-    <div className="App"> 
+    <div className="App container"> 
       <CountriesProvide>
         {/* children */}
         <Home></Home>

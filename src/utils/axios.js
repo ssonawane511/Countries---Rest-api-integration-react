@@ -2,7 +2,7 @@ import axios from 'axios';
 // import { refreshSession } from './api';
 
 const instance = axios.create({
-	baseURL: window.BASE_URL
+	baseURL: 'https://restcountries.com/v3.1'
 });
 
 instance.interceptors.response.use(
