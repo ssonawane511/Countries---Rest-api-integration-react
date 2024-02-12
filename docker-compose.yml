@@ -1,0 +1,8 @@
+version: '1.0'
+
+services: 
+  frontend:
+    build: .
+    container_name: 'rest-frontend'
+    ports:
+      - "3000:3000"
