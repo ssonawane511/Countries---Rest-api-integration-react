@@ -19,12 +19,26 @@ code {
 }
 
 .flex-jca{
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .container {
   max-width: 1320px;
   margin: auto;
+  margin-top: 50px;
+}
+
+.header {
+  width: 100%;
+  height: 30px;
+  background: white;
+  font-size: 24px;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .country-card{
@@ -37,7 +51,7 @@ code {
 
 .country-card img{ 
   height: 250px;
-  width: 100%;
+  width: 250px;
   object-fit: cover;
 }
 
@@ -48,4 +62,21 @@ code {
 .country-card .details p{
   margin: 0px;
   margin-bottom: 5px;
+}
+
+.search-container{
+  padding-top: 20px;
+}
+
+.search-container input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 300px;
+  border: none;
+  outline: none;
+}
+
+.search-container input:focus {
+  border: none;
+  outline: none;
 }

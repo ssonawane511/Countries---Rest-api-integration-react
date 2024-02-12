@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
-import { getCountries } from '../utils/api';
+import { getCountries, searchCountries } from '../utils/api';
+import { debounce } from "../utils";
 
 export const countriesContext = createContext();
 
@@ -15,10 +16,21 @@ const countriesProvider = (props) => {
         }    
     }
 
+    const search = debounce(async (searchTerm) => {
+        if(searchTerm === ''){ handleGetCountriesData(); return;}
+        try {
+            let response = await searchCountries(searchTerm);
+            setCountries(response.data)
+        }catch (error) {
+            console.error(error)
+        }
+    })
+
     return <countriesContext.Provider
                 value={{
                     countries: countries,
-                    getCountries: handleGetCountriesData
+                    getCountries: handleGetCountriesData,
+                    search: search
                 }}>    
                 {props.children}
             </countriesContext.Provider>
